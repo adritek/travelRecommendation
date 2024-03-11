@@ -1,0 +1,123 @@
+/* Basic CSS for the header and navigation bar */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(13,31,32);
+    background: linear-gradient(90deg, rgba(13,31,32,1) 42%, rgba(113,124,124,1) 100%);
+}
+
+nav {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px
+}
+
+main {
+    background-image: url("./images/battery_park.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; /* Ensure main fills the entire height of the viewport */
+    width: 100%; /* Ensure main fills the entire width of the viewport */
+    margin: 0; /* Remove any default margins */
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a {
+    text-decoration: none;
+    /* color: #333; */
+    font-weight: bold;
+}
+
+#searchBox {
+    margin-bottom: 0;
+}
+
+#searchBox input[type="text"] {
+    border-radius: 10px;
+    border: none; /* Remove default border */
+    outline: none; /* Remove default focus outline */
+    padding: 5px;
+}
+  
+
+/* Basic CSS for the socials */
+
+#socials {
+    width: 10%;
+}
+
+svg.socialIcon {
+    width: 26px;
+    padding: 15px 0px;
+    height: auto;
+}
+
+/* Basic CSS for the form elements */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* margin: 20px; */
+}
+
+
+#container {
+    max-width: 800px;
+    /* margin: 0 auto; */
+}
+
+h1.hero-text {
+    font-size: 3em;
+    padding: 40px 0;
+
+}
+ 
+p.promo-blurb {
+    max-width: 330px;
+    padding: 40px 0;
+}
+
+div {
+    margin-bottom: 10px;
+}
+  
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 200px;
+    padding: 5px;
+}
+
+button {
+    padding: 7px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+  
+button:hover {
+background-color: #45a049;
+}
