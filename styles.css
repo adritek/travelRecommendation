@@ -113,17 +113,13 @@ body {
 
 h1.hero-text {
     font-size: 3em;
-    padding: 140px 0;
+    padding-top: 130px;
 
 }
  
 p.promo-blurb {
     max-width: 330px;
     padding: 40px 0;
-}
-
-div {
-    margin-bottom: 10px;
 }
   
 label, #form-submit {
@@ -152,12 +148,18 @@ background-color: #45a049;
 
 /* Basic CSS for the about us*/
 
+#about-us-blurb {
+    margin-top: 50px;
+}
+
 #our-team-box {
     display: flex;
+    margin: 50px 0 0 30px;
 }
+
 .our-team-card {
-    width: 150px;
-    margin: 0 40px;
+    width: 270px;
+    margin: 0 24px;
 }
 
 .person-icon {
