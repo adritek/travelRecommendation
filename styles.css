@@ -140,10 +140,32 @@ button:hover {
 background-color: #45a049;
 }
 
-/* Basic CSS for the about */
+/* Basic CSS for the about us*/
 
 #our-team-box {
     display: flex;
+}
+.our-team-card {
+    width: 150px;
+    margin: 0 40px;
+}
+
+.person-icon {
+    background-color: darkblue;
+    /* display: inline-block; */
+    padding: 5px;
+    border-radius: 5px;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+}
+
+.job-description {
+    background-color: darkblue;
+    border-radius: 5px;
+    border: 1px solid lightslategray;
+    text-align: center;
+    padding: 4px;
 }
 
 /* Basic CSS for the contact us */
