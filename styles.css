@@ -68,6 +68,7 @@ nav a {
     border: none; /* Remove default border */
     outline: none; /* Remove default focus outline */
     padding: 5px;
+    color: black;
 }
   
 
@@ -115,13 +116,13 @@ div {
     margin-bottom: 10px;
 }
   
-label {
-    display: inline-block;
-    width: 100px;
+label, #form-submit {
+   display: block;
 }
 
 input[type="text"],
-input[type="number"],
+input[type="email"],
+input[type="textarea"],
 select {
     width: 200px;
     padding: 5px;
@@ -137,4 +138,18 @@ button {
   
 button:hover {
 background-color: #45a049;
+}
+
+/* Basic CSS for the about */
+
+#our-team-box {
+    display: flex;
+}
+
+/* Basic CSS for the contact us */
+
+#contact-us-form input[type="text"],
+#contact-us-form input[type="email"],
+#contact-us-form input[type="textarea"] {
+    color: black;
 }
