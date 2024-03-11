@@ -42,7 +42,7 @@ nav a {
 
 #searchBox {
     position: relative;
-    width: 350px;
+    width: 330px;
     margin-bottom: 0;
 }
 
@@ -50,27 +50,37 @@ nav a {
 #clearBtn {
     position: absolute;
     top: 0;
-    right: 0;
-    height: 100%; /* Adjust the height as needed */
+    right: 5px;
 }
 
 #searchBtn {
-    right: 63px;
+    right: 53px;
 }
 
-#searchQuery {
-    padding-right: 100px; /* Adjust the padding to accommodate the buttons */
-    width: 300px;
+button.searchBtns {
+    padding: 5px;
+    margin-top: 7px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    height: 30px;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
+
 
 #searchBox input[type="text"] {
     border-radius: 10px;
     border: none; /* Remove default border */
     outline: none; /* Remove default focus outline */
-    padding: 5px;
+    padding: 15px;
     color: black;
 }
-  
+
+#searchQuery {
+    padding-right: 100px; 
+    width: 100%
+}
 
 /* Basic CSS for the socials */
 
