@@ -41,7 +41,26 @@ nav a {
 }
 
 #searchBox {
+    position: relative;
+    width: 350px;
     margin-bottom: 0;
+}
+
+#searchBtn,
+#clearBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%; /* Adjust the height as needed */
+}
+
+#searchBtn {
+    right: 63px;
+}
+
+#searchQuery {
+    padding-right: 100px; /* Adjust the padding to accommodate the buttons */
+    width: 300px;
 }
 
 #searchBox input[type="text"] {
@@ -74,18 +93,16 @@ html, body {
 
 body {
     font-family: Arial, sans-serif;
-    /* margin: 20px; */
 }
 
 
 #container {
     max-width: 800px;
-    /* margin: 0 auto; */
 }
 
 h1.hero-text {
     font-size: 3em;
-    padding: 40px 0;
+    padding: 140px 0;
 
 }
  
