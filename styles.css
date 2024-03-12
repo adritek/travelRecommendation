@@ -7,6 +7,17 @@
     color: white;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: grey;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -21,17 +32,6 @@ nav {
     align-items: center;
     justify-content: space-evenly;
     gap: 30px
-}
-
-main {
-    background-image: url("./images/battery_park.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%; /* Ensure main fills the entire height of the viewport */
-    width: 100%; /* Ensure main fills the entire width of the viewport */
-    margin: 0; /* Remove any default margins */
-    display: flex;
-    justify-content: flex-start;
 }
 
 nav a {
@@ -68,7 +68,6 @@ button.searchBtns {
     cursor: pointer;
 }
 
-
 #searchBox input[type="text"] {
     border-radius: 10px;
     border: none; /* Remove default border */
@@ -94,18 +93,18 @@ svg.socialIcon {
     height: auto;
 }
 
-/* Basic CSS for the form elements */
+/* Basic CSS for the main body */
 
-html, body {
-    margin: 0;
-    padding: 0;
+main {
+    background-image: url("./images/battery_park.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
+    width: 100%;
+    margin: 0; 
+    display: flex;
+    justify-content: flex-start;
 }
-
-body {
-    font-family: Arial, sans-serif;
-}
-
 
 #container {
     max-width: 800px;
@@ -114,12 +113,15 @@ body {
 h1.hero-text {
     font-size: 3em;
     padding-top: 130px;
-
 }
  
 p.promo-blurb {
     max-width: 330px;
     padding: 40px 0;
+}
+
+#results {
+    color: darkgrey;
 }
   
 label, #form-submit {

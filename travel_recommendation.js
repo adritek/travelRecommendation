@@ -33,11 +33,6 @@ function fetchRecommendations(term) {
     fetch(recommendationsAPI)
         .then(response => response.json())
         .then(data => {
-            console.log('1. the term passed is: ', term);
-            console.log('2. data[term] = ', data[term]);
-            console.log('3. the raw data: ', data);
-
-
             data[term].map(item => {
                 const card = document.createElement("div");
                 const img = document.createElement("img")
@@ -46,10 +41,6 @@ function fetchRecommendations(term) {
                 const btn = document.createElement("button");
 
                 if (term === 'countries' || term === 'country') {
-
-                    console.log('if statement - item = ', item);
-                    console.log('if statement - term = ', term);
-                    console.log('if statement - item.term = ', item.term);
                     img.setAttribute("src", item.cities[0].imageUrl);
                     paragraph.textContent = item.cities[0].description;
                 }
