@@ -78,6 +78,10 @@ button.searchBtns {
     width: 10%;
 }
 
+#socials > svg {
+    margin-left: 10px;
+}
+
 #socials ul {
     list-style: none;
 }
@@ -97,7 +101,7 @@ main {
     width: 100%;
     margin: 0; 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 #container {
@@ -199,7 +203,8 @@ button:hover {
     height: fit-content;
     margin: 23px;
     padding: 15px;
-    background: rgba(108, 122, 137, 0.85)
+    background: rgba(108, 122, 137, 0.85);
+    border-radius: 3px;
 }
 
 #contact-us-form > div {
@@ -219,8 +224,14 @@ button:hover {
     padding: 7px;
 }
 
+#contact-us-form > div > button {
+    width: 100px;
+    border-radius: 5px;
+}
+
 #contact-us-form input[type="text"],
 #contact-us-form input[type="email"],
-#contact-us-form input[type="textarea"] {
+#contact-us-form textarea {
     color: black;
+    opacity: .7;
 }
