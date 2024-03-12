@@ -1,28 +1,23 @@
-/* Basic CSS for the header and navigation bar */
-
-* {
+/* Reset */
+*,
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: grey;
+    color: white;
 }
 
+/* Header and Navigation Bar */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(13,31,32);
     background: linear-gradient(90deg, rgba(13,31,32,1) 42%, rgba(113,124,124,1) 100%);
 }
 
@@ -31,15 +26,16 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    gap: 30px
+    gap: 30px;
 }
 
 nav a {
     text-decoration: none;
-    /* color: #333; */
     font-weight: bold;
+    color: white;
 }
 
+/* Search Box */
 #searchBox {
     position: relative;
     width: 330px;
@@ -70,19 +66,14 @@ button.searchBtns {
 
 #searchBox input[type="text"] {
     border-radius: 10px;
-    border: none; /* Remove default border */
-    outline: none; /* Remove default focus outline */
+    border: none;
+    outline: none;
     padding: 15px;
     color: black;
+    width: 100%;
 }
 
-#searchQuery {
-    padding-right: 100px; 
-    width: 100%
-}
-
-/* Basic CSS for the socials */
-
+/* Socials */
 #socials {
     width: 10%;
 }
@@ -93,13 +84,12 @@ svg.socialIcon {
     height: auto;
 }
 
-/* Basic CSS for the main body */
-
+/* Main Body */
 main {
     background-image: url("./images/battery_park.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     margin: 0; 
     display: flex;
@@ -114,17 +104,15 @@ h1.hero-text {
     font-size: 3em;
     padding-top: 130px;
 }
- 
+
 p.promo-blurb {
     max-width: 330px;
     padding: 40px 0;
 }
 
-#results {
-    color: darkgrey;
-}
-  
-label, #form-submit {
+/* Search/Form Elements */
+label,
+#form-submit {
    display: block;
 }
 
@@ -136,6 +124,7 @@ select {
     padding: 5px;
 }
 
+/* Buttons */
 button {
     padding: 7px 15px;
     background-color: #4CAF50;
@@ -143,13 +132,12 @@ button {
     border: none;
     cursor: pointer;
 }
-  
+
 button:hover {
-background-color: #45a049;
+    background-color: #45a049;
 }
 
-/* Basic CSS for the about us*/
-
+/* About Us */
 #about-us-blurb {
     margin-top: 50px;
 }
@@ -166,7 +154,6 @@ background-color: #45a049;
 
 .person-icon {
     background-color: darkblue;
-    /* display: inline-block; */
     padding: 5px;
     border-radius: 5px;
     height: 35px;
@@ -182,8 +169,7 @@ background-color: #45a049;
     padding: 4px;
 }
 
-/* Basic CSS for the contact us */
-
+/* Contact Us */
 #contact-us-form input[type="text"],
 #contact-us-form input[type="email"],
 #contact-us-form input[type="textarea"] {
