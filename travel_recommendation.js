@@ -14,7 +14,6 @@ function returnKeywordSearch(){
         case 'beach':
         case 'beaches':
             fetchRecommendations('beaches');
-            resetSearch();
             break;
         case 'temple':
         case 'temples':
@@ -36,6 +35,7 @@ function fetchRecommendations(term) {
     .then(data => {
         console.log(data[term]);
         document.getElementById("searchQuery").focus();
+        generateCard();
         resetSearch();
     })
     .catch(error => {
@@ -48,4 +48,17 @@ function resetSearch(){
     document.getElementById("searchQuery").value = "";
 }
 
+function generateCard(){
+    const card = document.createElement("div");
+    const img = document.createElement("img")
+    const title = document.createElement("h2");
+    const paragraph = document.createElement("p");
+    const btn = document.createElement("button");
+
+    card.setAttribute("class", "destinationCard");
+    btn.textContent = "Visit";
+    card.append(img, title, paragraph, btn);
+
+    document.getElementById("results").appendChild(card);
+}
 
