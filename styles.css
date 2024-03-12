@@ -76,6 +76,7 @@ button.searchBtns {
 /* Socials */
 #socials {
     width: 10%;
+    text-align: center;
 }
 
 #socials > svg {
@@ -101,11 +102,12 @@ main {
     width: 100%;
     margin: 0; 
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 #container {
-    max-width: 800px;
+    max-width: 1000px;
+    margin-right: 50px;
 }
 
 #results {
