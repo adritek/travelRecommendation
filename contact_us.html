@@ -54,22 +54,23 @@
                 <h1 class="hero-text">CONTACT US</h1>
                 <p class="promo-blurb">Get in touch</p>
 
-                <form id="contact-us-form">
-                    <div>
-                        <label for="name">Name</label>
-                        <input name="name" type="text" id="form-name" placeholder="Name" />
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input name="email" type="email" id="form-email" placeholder="your@email.com" />
-                    </div>
-                    <div>
-                        <label for="message">Message</label>
-                        <input name="message" type="textarea" id="form-message" placeholder="Write your message" />
-                    </div>
-                    <button onclick="thankyou()" type="submit">Submit</button>
-                </form>
             </div>
+
+            <form id="contact-us-form">
+                <div>
+                    <label for="name">Name</label>
+                    <input name="name" type="text" id="form-name" placeholder="Your name" />
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input name="email" type="email" id="form-email" placeholder="your@email.com" />
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea name="message" type="textarea" rows="10" cols="55" id="form-message" placeholder="Write your message"></textarea>
+                </div>
+                <button onclick="thankyou()" type="submit">Submit</button>
+            </form>
         </main>
         <script>
             function thankyou(){
