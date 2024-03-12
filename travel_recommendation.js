@@ -7,7 +7,7 @@ let cb = document.getElementById('clearBtn');
 keywordSubmit.addEventListener('click', returnKeywordSearch);
 cb.addEventListener('click', resetSearch);
 
-function returnKeywordSearch(){
+function returnKeywordSearch() {
     let keywordSearch = document.getElementById("searchQuery").value;
     let keyword = keywordSearch.toLowerCase();
     switch (keyword) {
@@ -17,38 +17,69 @@ function returnKeywordSearch(){
             break;
         case 'temple':
         case 'temples':
-            fetchRecommendations('temples')
+            fetchRecommendations('temples');
             break;
         case 'country':
         case 'countries':
-            fetchRecommendations('countries')
+            fetchRecommendations('countries');
             break;
         default:
-            alert('no recommendations')
+            alert('no recommendations');
             break;
     }
 }
 
 function fetchRecommendations(term) {
     fetch(recommendationsAPI)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data[term]);
-        document.getElementById("searchQuery").focus();
-        generateCard();
-        resetSearch();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    }); 
+        .then(response => response.json())
+        .then(data => {
+            console.log('1. the term passed is: ', term);
+            console.log('2. data[term] = ', data[term]);
+            console.log('3. the raw data: ', data);
+
+
+            data[term].map(item => {
+                const card = document.createElement("div");
+                const img = document.createElement("img")
+                const title = document.createElement("h2");
+                const paragraph = document.createElement("p");
+                const btn = document.createElement("button");
+
+                if (term === 'countries' || term === 'country') {
+
+                    console.log('if statement - item = ', item);
+                    console.log('if statement - term = ', term);
+                    console.log('if statement - item.term = ', item.term);
+                    img.setAttribute("src", item.cities[0].imageUrl);
+                    paragraph.textContent = item.cities[0].description;
+                }
+                // img.setAttribute("src", item.imageUrl)
+                img.setAttribute("width", "500px")
+                title.textContent = item.name;
+                // paragraph.textContent = item.description;
+                btn.textContent = "Visit"
+
+                card.append(img, title, paragraph, btn);
+
+                document.getElementById("results").appendChild(card);
+            })
+
+
+            document.getElementById("searchQuery").focus();
+            // generateCard();
+            resetSearch();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }
 
-// fetchRecommendations()
-function resetSearch(){
+function resetSearch() {
     document.getElementById("searchQuery").value = "";
+    // document.getElementById("results").innerHTML = "";
 }
 
-function generateCard(){
+function generateCard() {
     const card = document.createElement("div");
     const img = document.createElement("img")
     const title = document.createElement("h2");
@@ -61,4 +92,3 @@ function generateCard(){
 
     document.getElementById("results").appendChild(card);
 }
-
