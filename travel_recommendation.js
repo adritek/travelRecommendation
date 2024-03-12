@@ -43,13 +43,15 @@ function fetchRecommendations(term) {
                 if (term === 'countries' || term === 'country') {
                     title.textContent = item.cities[0].name;
                     img.setAttribute("src", item.cities[0].imageUrl);
+                    img.setAttribute("width", "500px");
                     paragraph.textContent = item.cities[0].description;
+                    btn.textContent = "Visit";
                 } else {
                     img.setAttribute("src", item.imageUrl);
                     img.setAttribute("width", "500px");
                     title.textContent = item.name;
                     paragraph.textContent = item.description;
-                    btn.textContent = "Visit"
+                    btn.textContent = "Visit";
                 }
                     
                 card.append(img, title, paragraph, btn);
